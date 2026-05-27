@@ -66,7 +66,7 @@ const FeaturedProjectsSection: React.FC = () => {
 					href={featuredProjectsPrUrl}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="inline-flex items-center gap-2 px-4 py-2 bg-cursor-text text-cursor-bg rounded-md hover:bg-cursor-text-muted transition-colors text-sm font-medium"
+					className="btn-secondary"
 				>
 					{t('home.submitProject')}
 					<ExternalLink className="w-4 h-4" />

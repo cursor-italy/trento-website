@@ -2,20 +2,13 @@ import { HeaderPhoto } from '@/lib/types';
 
 export const headerPhotos: HeaderPhoto[] = [
 	{
-		src: '/images/events/hero-group.jpg',
-		alt: 'Trento Cursor community group photo',
+		src: '/images/events/hero-collab.jpg',
+		alt: 'Workshop participants collaborating in Trento',
 		row: 1,
 		col: 1,
 		rowSpan: 2,
 		colSpan: 2,
 		mobile: { row: 1, col: 1, rowSpan: 2, colSpan: 2 },
-	},
-	{
-		src: '/images/events/hero-collab.jpg',
-		alt: 'Workshop participants collaborating in Trento',
-		row: 1,
-		col: 3,
-		mobile: { row: 3, col: 1 },
 	},
 	{
 		src: '/images/events/hero-talk.jpg',
@@ -28,9 +21,9 @@ export const headerPhotos: HeaderPhoto[] = [
 	{
 		src: '/images/events/hero-pair.jpg',
 		alt: 'Pair-programming session at Cafe Cursor',
-		row: 2,
+		row: 1,
 		col: 3,
-		mobile: { row: 3, col: 2 },
+		mobile: { row: 3, col: 1 },
 	},
 	{
 		src: '/images/events/hero-discussion.jpg',

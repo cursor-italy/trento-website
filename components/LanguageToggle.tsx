@@ -22,8 +22,8 @@ const LanguageToggle: React.FC = () => {
 				<button
 					key={localeCode}
 					onClick={() => setLocale(localeCode)}
-					className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-						locale === localeCode ? 'bg-cursor-text text-cursor-bg' : 'text-cursor-text-muted hover:text-cursor-text'
+					className={`btn-segment ${
+						locale === localeCode ? 'btn-segment-active' : ''
 					}`}
 				>
 					{localeLabels[localeCode] ?? localeCode.toUpperCase()}

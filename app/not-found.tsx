@@ -11,7 +11,7 @@ const NotFound: React.FC = () => {
 			<p className="text-cursor-text-muted text-lg mb-8">This page doesn&apos;t exist.</p>
 			<Link
 				href="/"
-				className="inline-flex items-center gap-2 px-5 py-2.5 bg-cursor-text text-cursor-bg rounded-md hover:bg-cursor-text-muted transition-colors text-sm font-medium"
+				className="btn-secondary"
 			>
 				Back to {siteConfig.communityName}
 			</Link>

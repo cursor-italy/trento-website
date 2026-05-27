@@ -80,7 +80,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, embedded = false })
 						>
 							<button
 								onClick={() => setIsFullscreen(false)}
-								className="absolute top-4 right-4 z-10 bg-cursor-bg/80 border border-cursor-border rounded-lg p-2 text-cursor-text hover:bg-cursor-bg transition-colors"
+								className="btn-icon absolute top-4 right-4 z-10"
 								aria-label={t('recap.closeGallery')}
 							>
 								<X className="w-5 h-5" />
@@ -111,14 +111,14 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, embedded = false })
 								<>
 									<button
 										onClick={() => setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length)}
-										className="absolute left-4 top-1/2 -translate-y-1/2 bg-cursor-bg/80 border border-cursor-border rounded-lg p-2 text-cursor-text hover:bg-cursor-bg transition-colors"
+										className="btn-icon absolute left-4 top-1/2 -translate-y-1/2"
 										aria-label={t('recap.prevPhoto')}
 									>
 										<ChevronLeft className="w-6 h-6" />
 									</button>
 									<button
 										onClick={() => setCurrentIndex((prev) => (prev + 1) % photos.length)}
-										className="absolute right-4 top-1/2 -translate-y-1/2 bg-cursor-bg/80 border border-cursor-border rounded-lg p-2 text-cursor-text hover:bg-cursor-bg transition-colors"
+										className="btn-icon absolute right-4 top-1/2 -translate-y-1/2"
 										aria-label={t('recap.nextPhoto')}
 									>
 										<ChevronRight className="w-6 h-6" />

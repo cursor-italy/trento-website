@@ -98,7 +98,7 @@ const AmbassadorSection: React.FC = () => {
 											href={link.href}
 											target="_blank"
 											rel="noopener noreferrer"
-											className="p-2 rounded border border-cursor-border text-cursor-text-muted hover:text-cursor-text hover:border-cursor-border-emphasis transition-colors"
+											className="btn-icon text-cursor-text-muted hover:text-cursor-text"
 											aria-label={`${ambassador.name} ${link.kind}`}
 										>
 											<SocialIcon kind={link.kind} />

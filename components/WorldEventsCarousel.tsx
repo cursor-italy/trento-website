@@ -39,7 +39,7 @@ const WorldEventsCarousel: React.FC = () => {
 							className="object-cover group-hover:scale-110 transition-transform duration-300"
 							sizes="(max-width: 768px) 50vw, 33vw"
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+						<div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent">
 							<div className="absolute bottom-0 left-0 right-0 p-3">
 								<p className="text-white text-sm font-medium">{photo.location}</p>
 								{photo.date ? <p className="text-white/80 text-xs">{photo.date}</p> : null}
@@ -64,7 +64,7 @@ const WorldEventsCarousel: React.FC = () => {
 						>
 							<button
 								onClick={() => setIsFullscreen(false)}
-								className="absolute top-4 right-4 z-10 bg-cursor-bg/80 border border-cursor-border rounded-lg p-2 text-cursor-text hover:bg-cursor-bg transition-colors"
+								className="btn-icon absolute top-4 right-4 z-10"
 								aria-label="Close"
 							>
 								<X className="w-5 h-5" />
@@ -94,14 +94,14 @@ const WorldEventsCarousel: React.FC = () => {
 								<>
 									<button
 										onClick={() => setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length)}
-										className="absolute left-4 top-1/2 -translate-y-1/2 bg-cursor-bg/80 border border-cursor-border rounded-lg p-2 text-cursor-text hover:bg-cursor-bg transition-colors"
+										className="btn-icon absolute left-4 top-1/2 -translate-y-1/2"
 										aria-label="Previous photo"
 									>
 										<ChevronLeft className="w-6 h-6" />
 									</button>
 									<button
 										onClick={() => setCurrentIndex((prev) => (prev + 1) % photos.length)}
-										className="absolute right-4 top-1/2 -translate-y-1/2 bg-cursor-bg/80 border border-cursor-border rounded-lg p-2 text-cursor-text hover:bg-cursor-bg transition-colors"
+										className="btn-icon absolute right-4 top-1/2 -translate-y-1/2"
 										aria-label="Next photo"
 									>
 										<ChevronRight className="w-6 h-6" />

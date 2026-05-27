@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
 							href={nextEvent.lumaUrl}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#f54e00] text-white rounded-md hover:bg-[#e04500] transition-colors text-sm font-medium"
+							className="btn-primary"
 						>
 							{t('footer.joinNext')}
 							<ExternalLink className="w-3.5 h-3.5" />

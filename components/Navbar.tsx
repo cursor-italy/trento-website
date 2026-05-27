@@ -107,7 +107,7 @@ export default function Navbar() {
               href={siteConfig.lumaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium px-3.5 py-1.5 rounded-md bg-[#f54e00] text-white hover:bg-[#e04500] transition-colors"
+              className="btn-primary btn-compact"
             >
               {t('nav.joinUs')}
             </a>
@@ -145,7 +145,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobile}
-              className="text-base font-medium px-5 py-2.5 rounded-md bg-[#f54e00] text-white hover:bg-[#e04500] transition-colors"
+              className="btn-primary text-base"
             >
               {t('nav.joinUs')}
             </a>

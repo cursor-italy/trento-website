@@ -37,6 +37,12 @@
 
 	--animate-fade-in: fade-in 0.5s ease-out forwards;
 	--animate-slide-up: slide-up 0.5s ease-out forwards;
+	--radius-button: 999px;
+	--shadow-button-primary: 0 10px 24px rgba(245, 78, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+	--shadow-button-primary-hover: 0 14px 30px rgba(245, 78, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.16);
+	--shadow-button-secondary: 0 8px 22px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(237, 236, 236, 0.08);
+	--shadow-button-secondary-hover: 0 12px 28px rgba(0, 0, 0, 0.46), 0 0 0 1px rgba(237, 236, 236, 0.15);
+	--shadow-button-icon: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(237, 236, 236, 0.1);
 
 	@keyframes fade-in {
 		0% {
@@ -85,4 +91,111 @@
 
 @utility font-thai {
 	font-family: var(--font-thai);
+}
+
+@utility btn-base {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	border-radius: var(--radius-button);
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: 1.25rem;
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease,
+		border-color 0.2s ease, opacity 0.2s ease;
+}
+
+@utility btn-base-focus {
+	outline: none;
+}
+
+@utility btn-base-focus {
+	&:focus-visible {
+		outline: 2px solid rgba(237, 236, 236, 0.72);
+		outline-offset: 2px;
+	}
+}
+
+@utility btn-lift {
+	&:hover {
+		transform: translateY(-1px);
+	}
+
+	&:active {
+		transform: translateY(0);
+	}
+}
+
+@utility btn-compact {
+	padding: 0.375rem 0.875rem;
+}
+
+@utility btn-primary {
+	@apply btn-base btn-base-focus btn-lift;
+	padding: 0.625rem 1.25rem;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background: linear-gradient(135deg, #ff7a3d 0%, #f54e00 50%, #cf3a00 100%);
+	box-shadow: var(--shadow-button-primary);
+}
+
+@utility btn-primary {
+	&:hover {
+		background: linear-gradient(135deg, #ff8248 0%, #f85a10 50%, #da4307 100%);
+		box-shadow: var(--shadow-button-primary-hover);
+	}
+}
+
+@utility btn-secondary {
+	@apply btn-base btn-base-focus btn-lift;
+	padding: 0.625rem 1.25rem;
+	color: var(--color-cursor-bg);
+	border: 1px solid rgba(237, 236, 236, 0.14);
+	background: linear-gradient(140deg, #ffffff 0%, #ece7e2 100%);
+	box-shadow: var(--shadow-button-secondary);
+}
+
+@utility btn-secondary {
+	&:hover {
+		background: linear-gradient(140deg, #f4efea 0%, #dfdad4 100%);
+		box-shadow: var(--shadow-button-secondary-hover);
+	}
+}
+
+@utility btn-segment {
+	@apply btn-base btn-base-focus;
+	padding: 0.4rem 0.9rem;
+	background: transparent;
+	color: var(--color-cursor-text-muted);
+}
+
+@utility btn-segment {
+	&:hover {
+		color: var(--color-cursor-text);
+		background: rgba(237, 236, 236, 0.06);
+	}
+}
+
+@utility btn-segment-active {
+	color: var(--color-cursor-bg);
+	background: linear-gradient(140deg, #ffffff 0%, #ebe6e1 100%);
+	box-shadow: var(--shadow-button-secondary);
+}
+
+@utility btn-icon {
+	@apply btn-base btn-base-focus btn-lift;
+	padding: 0.55rem;
+	color: var(--color-cursor-text);
+	border: 1px solid var(--color-cursor-border-emphasis);
+	background: linear-gradient(145deg, rgba(20, 18, 11, 0.9) 0%, rgba(28, 26, 18, 0.92) 100%);
+	box-shadow: var(--shadow-button-icon);
+}
+
+@utility btn-icon {
+	&:hover {
+		border-color: rgba(237, 236, 236, 0.22);
+		background: linear-gradient(145deg, rgba(30, 28, 20, 0.95) 0%, rgba(36, 34, 24, 0.98) 100%);
+	}
 }
